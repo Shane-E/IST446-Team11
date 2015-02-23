@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\spawnScript.js">
+    <Files>
+      <File FileName="Assets\Scripts\spaceshipScript.js" Line="26" Column="37" />
+      <File FileName="Assets\Scripts\bulletScript.js" Line="16" Column="2" />
+      <File FileName="Assets\enemyScript.js" Line="39" Column="40" />
+      <File FileName="Assets\spawnScript.js" Line="29" Column="4" />
+      <File FileName="Assets\backwallScript.js" Line="22" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
