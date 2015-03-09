@@ -29,8 +29,12 @@ function addEnemy() {
  	}
 }
 
-static function inc_score () {
+static function incScore () {
 	score++;
+}
+
+static function getScore () {
+	return score;
 }
 
 static function end_game_trigger () {

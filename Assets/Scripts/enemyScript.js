@@ -28,7 +28,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
         // And destroy the bullet
         Destroy(obj.gameObject);
         
-        spawnScript.inc_score();
+        spawnScript.incScore();
     }
 
     /* If it collided with the spaceship

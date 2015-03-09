@@ -1,14 +1,17 @@
 ﻿#pragma strict
 
-public var bullet : GameObject;
-public var bullet_count : int;
-public var levelFinished : boolean;
+public var bullet: GameObject;
+public var bullet_count: int;
+public var levelFinished: boolean;
 public var playerDie: boolean;
-var impact : AudioClip;
+public var scoreObj: spawnScript;
+public var score: int;
+var impact: AudioClip;
 private var animator: Animator;
 
 function Start () {
 	bullet_count = 0;
+	scoreObj = GetComponent("spawnScript");
 	levelFinished = false;
 	playerDie = false;
 	animator = GetComponent("Animator");
@@ -22,6 +25,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
         // Plays player death animation.
         playerDie = true;
         animator.SetBool("PlayerDie", true);
+        
         // Destroys player after animation is complete.
         Destroy(gameObject, 0.8);
         Destroy(obj.gameObject); // You lose!
@@ -55,6 +59,11 @@ function Update() {
     	bullet_count = 0;
     }
     
+    //Grabs the score and checks if the player have beaten the level.
+    score = scoreObj.getScore();
+    if(score >= 30){
+    	levelFinished = true;
+    }
     
     //Once the player finishes a level, load the upgrades manager screen.
     if(levelFinished){
