@@ -2,21 +2,46 @@
 
 public var bullet : GameObject;
 public var bullet_count : int;
+public var levelFinished : boolean;
+public var playerDie: boolean;
 var impact : AudioClip;
+private var animator: Animator;
 
 function Start () {
 	bullet_count = 0;
+	levelFinished = false;
+	playerDie = false;
+	animator = GetComponent("Animator");
 }
 
+function OnTriggerEnter2D(obj : Collider2D) {  
+    var name = obj.gameObject.name;
+    
+    // If player collided with enemy
+    if (name == "enemy(Clone)") {
+        // Plays player death animation.
+        playerDie = true;
+        animator.SetBool("PlayerDie", true);
+        // Destroys player after animation is complete.
+        Destroy(gameObject, 0.8);
+        Destroy(obj.gameObject); // You lose!
+        spawnScript.end_game_trigger();
+    }
+}
 
 // This function gets called ~60 times per second
 function Update() {  
     // GetAxis() returns a value between 1 and -1
     // Depending on which arrow key is pressed
 
-    // movement
-    rigidbody2D.velocity.x = Input.GetAxis("Horizontal") * 10;
-    rigidbody2D.velocity.y = Input.GetAxis("Vertical") * 10;
+    // movement depending on if player is alive or dead
+    if(playerDie == true){
+    	rigidbody2D.velocity.x = 0;
+    	rigidbody2D.velocity.y = 0;
+    }else{
+    	rigidbody2D.velocity.x = Input.GetAxis("Horizontal") * 10;
+    	rigidbody2D.velocity.y = Input.GetAxis("Vertical") * 10;
+    }
     
     if (Input.GetKey("z") && bullet_count < 1) {
     	// create a new bullet at "transform.position"
@@ -28,5 +53,11 @@ function Update() {
     	bullet_count++;
     } else {
     	bullet_count = 0;
+    }
+    
+    
+    //Once the player finishes a level, load the upgrades manager screen.
+    if(levelFinished){
+    	Application.LoadLevel("UpgradeScene");
     }
 }
