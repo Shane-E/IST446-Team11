@@ -31,6 +31,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
         spawnScript.incScore();
     }
 
+	//MOVED TO spaceshipScript.
     /* If it collided with the spaceship
     if (name == "spaceship") {
         // Destroy itself (the enemy) to keep things simple

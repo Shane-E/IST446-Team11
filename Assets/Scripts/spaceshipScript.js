@@ -6,7 +6,9 @@ public var levelFinished: boolean;
 public var playerDie: boolean;
 public var scoreObj: spawnScript;
 public var score: int;
-var impact: AudioClip;
+var shoot: AudioClip;
+var explode: AudioClip;
+var clones;
 private var animator: Animator;
 
 function Start () {
@@ -25,6 +27,8 @@ function OnTriggerEnter2D(obj : Collider2D) {
         // Plays player death animation.
         playerDie = true;
         animator.SetBool("PlayerDie", true);
+        audio.PlayOneShot(explode, 2);
+        Collider.
         
         // Destroys player after animation is complete.
         Destroy(gameObject, 0.8);
@@ -52,7 +56,7 @@ function Update() {
     	// Which is the current position of the ship
     	
     	
-    	audio.PlayOneShot(impact, 0.7);
+    	audio.PlayOneShot(shoot, 0.7);
     	Instantiate(bullet, transform.position, Quaternion.identity);
     	bullet_count++;
     } else {
