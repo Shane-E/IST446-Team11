@@ -41,9 +41,16 @@ static function end_game_trigger () {
 	end_game = 1;
 }
 
+function Update () {
+	if(Input.GetKeyDown(KeyCode.Return)){
+		end_game = 0;
+		Application.LoadLevel(0);
+	}
+}
+
 function OnGUI () {
 	GUI.Label (new Rect (Screen.width - 70, 25, 50, 15), "Score: " + score, menuStyle);
 	if (end_game) {
-		GUI.Label (new Rect (Screen.width/2, Screen.height/2, 50, 15), "You Lost!", menuStyle);
+		GUI.Label (new Rect (Screen.width/2, Screen.height/2, 50, 15), "You Lost!\n Press Enter To Restart.", menuStyle);
 	}
 }
