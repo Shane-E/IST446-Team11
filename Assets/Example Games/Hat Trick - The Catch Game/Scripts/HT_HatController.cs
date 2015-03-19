@@ -15,7 +15,7 @@ public class HT_HatController : MonoBehaviour {
 		}
 		Vector3 upperCorner = new Vector3 (Screen.width, Screen.height, 0.0f);
 		Vector3 targetWidth = cam.ScreenToWorldPoint (upperCorner);
-		float hatWidth = renderer.bounds.extents.x;
+		float hatWidth = GetComponent<Renderer>().bounds.extents.x;
 		maxWidth = targetWidth.x - hatWidth;
 		canControl = false;
 	}
@@ -27,7 +27,7 @@ public class HT_HatController : MonoBehaviour {
 			Vector3 targetPosition = new Vector3 (rawPosition.x, 0.0f, 0.0f);
 			float targetWidth = Mathf.Clamp (targetPosition.x, -maxWidth, maxWidth);
 			targetPosition = new Vector3 (targetWidth, targetPosition.y, targetPosition.z);
-			rigidbody2D.MovePosition (targetPosition);
+			GetComponent<Rigidbody2D>().MovePosition (targetPosition);
 		}
 	}
 

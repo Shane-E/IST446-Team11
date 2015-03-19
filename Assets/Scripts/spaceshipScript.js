@@ -24,16 +24,20 @@ function OnTriggerEnter2D(obj : Collider2D) {
     
     // If player collided with enemy
     if (name == "enemy(Clone)") {
+        
+        
         // Plays player death animation.
+        {
         playerDie = true;
         animator.SetBool("PlayerDie", true);
-        audio.PlayOneShot(explode, 2);
+        GetComponent.<AudioSource>().PlayOneShot(explode, 2);
         Collider.
         
         // Destroys player after animation is complete.
         Destroy(gameObject, 0.8);
         Destroy(obj.gameObject); // You lose!
         spawnScript.end_game_trigger();
+        }
     }
 }
 
@@ -44,11 +48,11 @@ function Update() {
 
     // movement depending on if player is alive or dead
     if(playerDie == true){
-    	rigidbody2D.velocity.x = 0;
-    	rigidbody2D.velocity.y = 0;
+    	GetComponent.<Rigidbody2D>().velocity.x = 0;
+    	GetComponent.<Rigidbody2D>().velocity.y = 0;
     }else{
-    	rigidbody2D.velocity.x = Input.GetAxis("Horizontal") * 10;
-    	rigidbody2D.velocity.y = Input.GetAxis("Vertical") * 10;
+    	GetComponent.<Rigidbody2D>().velocity.x = Input.GetAxis("Horizontal") * 10;
+    	GetComponent.<Rigidbody2D>().velocity.y = Input.GetAxis("Vertical") * 10;
     }
     
     if (Input.GetKey("z") && bullet_count < 1) {
@@ -56,7 +60,7 @@ function Update() {
     	// Which is the current position of the ship
     	
     	
-    	audio.PlayOneShot(shoot, 0.7);
+    	GetComponent.<AudioSource>().PlayOneShot(shoot, 0.7);
     	Instantiate(bullet, transform.position, Quaternion.identity);
     	bullet_count++;
     } else {

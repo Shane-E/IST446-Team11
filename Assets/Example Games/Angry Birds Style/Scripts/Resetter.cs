@@ -34,7 +34,7 @@ public class Resetter : MonoBehaviour {
 	
 	void OnTriggerExit2D (Collider2D other) {
 		//	If the projectile leaves the Collider2D boundary...
-		if (other.rigidbody2D == projectile) {
+		if (other.GetComponent<Rigidbody2D>() == projectile) {
 			//	... call the Reset() function
 			Reset ();
 		}

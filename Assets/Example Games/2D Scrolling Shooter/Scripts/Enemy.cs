@@ -17,7 +17,7 @@ public class Enemy : Spaceship
 		base.OnEnable ();
 		//Initialize the ship's hit points and speed
 		currentHP = hp;
-		rigidbody2D.velocity = (transform.up * -1) * speed;
+		GetComponent<Rigidbody2D>().velocity = (transform.up * -1) * speed;
 	}
 
 	void OnTriggerEnter2D (Collider2D c)

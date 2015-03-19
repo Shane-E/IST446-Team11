@@ -1,13 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\spaceshipScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/spaceshipScript.js">
     <Files>
-      <File FileName="Assets\Scripts\spaceshipScript.js" Line="37" Column="6" />
-      <File FileName="Assets\Scripts\backwallScript.js" Line="16" Column="12" />
-      <File FileName="Assets\Scripts\bulletScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\enemyScript.js" Line="7" Column="21" />
-      <File FileName="Assets\Scripts\spawnScript.js" Line="13" Column="55" />
-      <File FileName="Assets\Scripts\upgradeScene.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/spaceshipScript.js" Line="27" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

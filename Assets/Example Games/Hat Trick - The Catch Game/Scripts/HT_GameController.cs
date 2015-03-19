@@ -23,7 +23,7 @@ public class HT_GameController : MonoBehaviour {
 		}
 		Vector3 upperCorner = new Vector3 (Screen.width, Screen.height, 0.0f);
 		Vector3 targetWidth = cam.ScreenToWorldPoint (upperCorner);
-		float ballWidth = balls[0].renderer.bounds.extents.x;
+		float ballWidth = balls[0].GetComponent<Renderer>().bounds.extents.x;
 		maxWidth = targetWidth.x - ballWidth;
 		timerText.text = "TIME LEFT:\n" + Mathf.RoundToInt (timeLeft);
 	}

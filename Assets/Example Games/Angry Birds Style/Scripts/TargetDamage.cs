@@ -44,10 +44,10 @@ public class TargetDamage : MonoBehaviour {
 	void Kill () {
 		//	As the particle system is attached to this GameObject, when Killed, switch off all of the visible behaviours...
 		spriteRenderer.enabled = false;
-		collider2D.enabled = false;
-		rigidbody2D.isKinematic = true;
+		GetComponent<Collider2D>().enabled = false;
+		GetComponent<Rigidbody2D>().isKinematic = true;
 
 		//	... and Play the particle system
-		particleSystem.Play();
+		GetComponent<ParticleSystem>().Play();
 	}
 }

@@ -25,7 +25,7 @@ public class ProjectileDragging : MonoBehaviour {
 		rayToMouse = new Ray(catapult.position, Vector3.zero);
 		leftCatapultToProjectile = new Ray(catapultLineFront.transform.position, Vector3.zero);
 		maxStretchSqr = maxStretch * maxStretch;
-		CircleCollider2D circle = collider2D as CircleCollider2D;
+		CircleCollider2D circle = GetComponent<Collider2D>() as CircleCollider2D;
 		circleRadius = circle.radius;
 	}
 	
@@ -34,13 +34,13 @@ public class ProjectileDragging : MonoBehaviour {
 			Dragging ();
 		
 		if (spring != null) {
-			if (!rigidbody2D.isKinematic && prevVelocity.sqrMagnitude > rigidbody2D.velocity.sqrMagnitude) {
+			if (!GetComponent<Rigidbody2D>().isKinematic && prevVelocity.sqrMagnitude > GetComponent<Rigidbody2D>().velocity.sqrMagnitude) {
 				Destroy (spring);
-				rigidbody2D.velocity = prevVelocity;
+				GetComponent<Rigidbody2D>().velocity = prevVelocity;
 			}
 			
 			if (!clickedOn)
-				prevVelocity = rigidbody2D.velocity;
+				prevVelocity = GetComponent<Rigidbody2D>().velocity;
 			
 			LineRendererUpdate ();
 			
@@ -68,7 +68,7 @@ public class ProjectileDragging : MonoBehaviour {
 	
 	void OnMouseUp () {
 		spring.enabled = true;
-		rigidbody2D.isKinematic = false;
+		GetComponent<Rigidbody2D>().isKinematic = false;
 		clickedOn = false;
 	}
 

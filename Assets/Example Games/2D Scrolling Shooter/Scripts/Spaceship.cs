@@ -60,8 +60,8 @@ public class Spaceship : MonoBehaviour
 		while(true)
 		{
 			//If there is an acompanying audio, play it
-			if (audio)
-				audio.Play ();
+			if (GetComponent<AudioSource>())
+				GetComponent<AudioSource>().Play ();
 			//Loop through the fire points
 			for(int i = 0; i < shotPositions.Length; i++)
 			{

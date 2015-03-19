@@ -16,7 +16,7 @@ public class BirdScript : MonoBehaviour
 		//get reference to the animator component
 		anim = GetComponent<Animator> ();
 		//set the bird moving forward
-		rigidbody2D.velocity = new Vector2 (forwardSpeed, 0);
+		GetComponent<Rigidbody2D>().velocity = new Vector2 (forwardSpeed, 0);
 	}
 
 	void Update()
@@ -39,9 +39,9 @@ public class BirdScript : MonoBehaviour
 			//...tell the animator about it and then...
 			anim.SetTrigger("Flap");
 			//...zero out the birds current y velocity before...
-			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
 			//..giving the bird some upward force
-			rigidbody2D.AddForce(new Vector2(0, upForce));
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, upForce));
 		}
 	}
 

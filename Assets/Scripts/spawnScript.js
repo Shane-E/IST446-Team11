@@ -17,8 +17,8 @@ function Start() {
 function addEnemy() {  
     // Variables to store the X position of the spawn object
     // See image below
-    var x1 = transform.position.x - renderer.bounds.size.x/2;
-    var x2 = transform.position.x + renderer.bounds.size.x/2;
+    var x1 = transform.position.x - GetComponent.<Renderer>().bounds.size.x/2;
+    var x2 = transform.position.x + GetComponent.<Renderer>().bounds.size.x/2;
 
     // Randomly pick a point within the spawn object
     var spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
