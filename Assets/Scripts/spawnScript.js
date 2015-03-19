@@ -5,12 +5,13 @@ var menuStyle : GUIStyle;
 static var end_game : int;
 
 // Variable to know how fast we should create new enemies
-public var spawnTime : float = 2;
+public var spawnTime : float = 0.5;
+public var startSpawn: float = 1;
 
 function Start() {  
 	score = 0;
     // Call the 'addEnemy' function every 'spawnTime' seconds
-    InvokeRepeating("addEnemy", spawnTime, spawnTime);
+    InvokeRepeating("addEnemy", startSpawn, spawnTime);
 }
 
 // New function to spawn an enemy
@@ -22,10 +23,10 @@ function addEnemy() {
 
     // Randomly pick a point within the spawn object
     var spawnPoint = new Vector2(Random.Range(x1, x2), transform.position.y);
-
+	Instantiate(enemy, spawnPoint, Quaternion.identity);
     // Create an enemy at the 'spawnPoint' position
-    if (!end_game) {
- 		Instantiate(enemy, spawnPoint, Quaternion.identity);
+    if (end_game) {
+ 		CancelInvoke("addEnemy");
  	}
 }
 
@@ -42,6 +43,7 @@ static function end_game_trigger () {
 }
 
 function Update () {
+//Restarts game when Enter is pressed.
 	if(Input.GetKeyDown(KeyCode.Return)){
 		end_game = 0;
 		Application.LoadLevel(0);

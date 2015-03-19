@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 // Public variable that contains the speed of the enemy
-public var speed : int = 35;
+public var speed : int = 20;
 
 // Function called when the enemy is created
 function Start () { 

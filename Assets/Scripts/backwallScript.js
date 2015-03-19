@@ -23,6 +23,6 @@ function OnTriggerEnter2D(obj : Collider2D) {
     }
 }
 
-function OnGUI () {
+/*function OnGUI () {
 	GUI.Label (new Rect (Screen.width - 70, 5, 50, 15), "Left: " + enemies_left, menuStyle);
-}
+}*/
