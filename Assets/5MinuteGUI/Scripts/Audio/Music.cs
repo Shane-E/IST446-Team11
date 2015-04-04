@@ -24,7 +24,7 @@ namespace FMG {
 				if(musicClip!=K_AUDIO.clip)
 				{
 					K_AUDIO.clip = musicClip;
-					K_AUDIO.Play();
+					//K_AUDIO.Play();
 				}
 			}
 		}
