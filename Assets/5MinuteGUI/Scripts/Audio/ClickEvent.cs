@@ -10,8 +10,13 @@ namespace FMG
 		public virtual void OnPointerClick(PointerEventData eventData)
 		{
 			Debug.Log ("ClickEvent" );
-			if(GetComponent<AudioSource>())
-				GetComponent<AudioSource>().Play();
+			if (GetComponent<AudioSource> ()) {
+				GetComponent<AudioSource> ().Play ();
+			}
+			if (this.name == "Start") {
+				Application.LoadLevel("MainScene");
+				Destroy(this);
+			}
 		}
 	}
 }

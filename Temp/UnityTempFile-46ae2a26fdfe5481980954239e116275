@@ -1,0 +1,107 @@
+-debug
+-target:library
+-nowarn:0169
+-out:'Temp/Assembly-CSharp.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-define:UNITY_5_0_0
+-define:UNITY_5_0
+-define:UNITY_5
+-define:ENABLE_LICENSE_RENAME
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_4_6_FEATURES
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_NEW_HIERARCHY
+-define:ENABLE_PHYSICS
+-define:ENABLE_PHYSICS_PHYSX3
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_AUDIOMIXER_SUSPEND
+-define:ENABLE_NONPRO
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+'Assets/5MinuteGUI/Scripts/Audio/AudioVolume.cs'
+'Assets/5MinuteGUI/Scripts/Audio/ClickEvent.cs'
+'Assets/5MinuteGUI/Scripts/Audio/Music.cs'
+'Assets/5MinuteGUI/Scripts/Menu/ButtonToggle.cs'
+'Assets/5MinuteGUI/Scripts/Menu/GameMenu.cs'
+'Assets/5MinuteGUI/Scripts/Menu/LevelButton.cs'
+'Assets/5MinuteGUI/Scripts/Menu/LevelSelect.cs'
+'Assets/5MinuteGUI/Scripts/Menu/MainMenu.cs'
+'Assets/5MinuteGUI/Scripts/Menu/OptionsMenu.cs'
+'Assets/5MinuteGUI/Scripts/Misc/Constants.cs'
+'Assets/5MinuteGUI/Scripts/Misc/DisableIfNoNextLevel.cs'
+'Assets/5MinuteGUI/Scripts/Misc/LevelUnlocker.cs'
+'Assets/5MinuteGUI/Scripts/Misc/Rotator.cs'
+'Assets/5MinuteGUI/Scripts/Splash/BaseImage.cs'
+'Assets/5MinuteGUI/Scripts/Splash/FadeScript.cs'
+'Assets/5MinuteGUI/Scripts/Splash/SplashImage.cs'
+'Assets/5MinuteGUI/Scripts/Splash/SplashImages.cs'
+'Assets/5MinuteGUI/Standard Assets/Image Effects (Pro Only)/GlowEffect.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Background.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Bullet.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/DestroyArea.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Emitter.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Enemy.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Explosion.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Manager.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/ObjectPool.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Player.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/ShipResetScript.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/Spaceship.cs'
+'Assets/Example Games/2D Scrolling Shooter/Scripts/WaveScript.cs'
+'Assets/Example Games/Angry Birds Style/Scripts/ProjectileDragging.cs'
+'Assets/Example Games/Angry Birds Style/Scripts/ProjectileFollow.cs'
+'Assets/Example Games/Angry Birds Style/Scripts/Resetter.cs'
+'Assets/Example Games/Angry Birds Style/Scripts/TargetDamage.cs'
+'Assets/Example Games/Flappy Bird Style/Scripts/BirdScript.cs'
+'Assets/Example Games/Flappy Bird Style/Scripts/CameraFollow.cs'
+'Assets/Example Games/Flappy Bird Style/Scripts/ColumnScript.cs'
+'Assets/Example Games/Flappy Bird Style/Scripts/ColumnSpawnScript.cs'
+'Assets/Example Games/Flappy Bird Style/Scripts/GameControlScript.cs'
+'Assets/Example Games/Flappy Bird Style/Scripts/ScrollScript.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_DestroyOnContact.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_Explode.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_GameController.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_HatController.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_Restart.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_Score.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_SetParticleSortingLayer.cs'
+'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_StartGame.cs'
+'Assets/Scripts/ClickEvents.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

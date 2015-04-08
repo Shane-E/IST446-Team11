@@ -1,49 +1,13 @@
-Base path: F:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-8720
+Base path: /Applications/Unity/Unity.app/Contents
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-2065695488
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=1041 outsize=464 ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=878 outsize=131 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=878 outsize=96 kw= ok=1
+  insize=984 outsize=438 ok=1
 Cmd: preprocess
-  insize=2386 outsize=1258 ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=1369 outsize=379 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1369 outsize=353 kw= ok=1
+  insize=2281 outsize=1208 ok=1
 Cmd: preprocess
-  insize=1808 outsize=713 ok=1
+  insize=1734 outsize=683 ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1397 outsize=308 kw= ok=1
+  api=0 type=0 insize=9591 outsize=6366 kw=UNITY_COLORSPACE_GAMMA ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1397 outsize=292 kw= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=541 outsize=832 kw=SHADOWS_DEPTH ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=541 outsize=61 kw=SHADOWS_DEPTH ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=7257 outsize=941 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=7257 outsize=579 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=4694 outsize=725 kw=DIRECTIONAL ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=4694 outsize=543 kw=DIRECTIONAL ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=751 outsize=814 kw=SHADOWS_DEPTH ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=751 outsize=65 kw=SHADOWS_DEPTH ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=982 outsize=842 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=982 outsize=3588 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=938 outsize=808 kw=DIRECTIONAL SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=938 outsize=1916 kw=DIRECTIONAL SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=9591 outsize=3891 kw=UNITY_COLORSPACE_GAMMA ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=9591 outsize=967 kw=UNITY_COLORSPACE_GAMMA ok=1
+  api=0 type=1 insize=9591 outsize=6 kw=UNITY_COLORSPACE_GAMMA ok=1
