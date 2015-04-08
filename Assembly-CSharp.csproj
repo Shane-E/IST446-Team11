@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\5MinuteGUI\Scripts\Audio\AudioVolume.cs" />
-     <Compile Include="Assets\5MinuteGUI\Scripts\Audio\ClickEvent.cs" />
      <Compile Include="Assets\5MinuteGUI\Scripts\Audio\Music.cs" />
      <Compile Include="Assets\5MinuteGUI\Scripts\Menu\ButtonToggle.cs" />
      <Compile Include="Assets\5MinuteGUI\Scripts\Menu\GameMenu.cs" />
@@ -94,6 +93,7 @@
      <Compile Include="Assets\Example Games\Hat Trick - The Catch Game\Scripts\HT_Score.cs" />
      <Compile Include="Assets\Example Games\Hat Trick - The Catch Game\Scripts\HT_SetParticleSortingLayer.cs" />
      <Compile Include="Assets\Example Games\Hat Trick - The Catch Game\Scripts\HT_StartGame.cs" />
+     <Compile Include="Assets\Scripts\ClickEvent.cs" />
      <Compile Include="Assets\Scripts\ClickEvents.cs" />
      <None Include="Assets\5MinuteGUI\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
      <None Include="Assets\Example Games\Flappy Bird Style\_ReadMe.txt" />

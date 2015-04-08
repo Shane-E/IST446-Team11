@@ -15,7 +15,18 @@ namespace FMG
 			}
 			if (this.name == "Start") {
 				Application.LoadLevel("MainScene");
-				Destroy(this);
+			}
+			if(this.name == "Instructions"){
+				Application.LoadLevel("Instructions");
+			}
+			if (this.name == "Credits") {
+				Application.LoadLevel("Credits");
+			}
+			if (this.name == "InstructionsBack") {
+				Application.LoadLevel ("MenuScene");
+			}
+			if(this.name == "CreditsBack"){
+				Application.LoadLevel ("MenuScene");
 			}
 		}
 	}

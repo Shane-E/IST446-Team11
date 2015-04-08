@@ -16,8 +16,6 @@
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -define:UNITY_5_0_0
 -define:UNITY_5_0
@@ -55,9 +53,10 @@
 -define:INCLUDE_IL2CPP
 -define:PLATFORM_SUPPORTS_MONO
 -define:RENDER_SOFTWARE_CURSOR
--define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE_OSX
 -define:UNITY_STANDALONE
 -define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
 -define:ENABLE_TEXTUREID_MAP
 -define:ENABLE_RUNTIME_GI
 -define:ENABLE_MOVIES

@@ -42,9 +42,10 @@
 -define:INCLUDE_IL2CPP
 -define:PLATFORM_SUPPORTS_MONO
 -define:RENDER_SOFTWARE_CURSOR
--define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE_OSX
 -define:UNITY_STANDALONE
 -define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
 -define:ENABLE_TEXTUREID_MAP
 -define:ENABLE_RUNTIME_GI
 -define:ENABLE_MOVIES
@@ -55,7 +56,6 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 'Assets/5MinuteGUI/Scripts/Audio/AudioVolume.cs'
-'Assets/5MinuteGUI/Scripts/Audio/ClickEvent.cs'
 'Assets/5MinuteGUI/Scripts/Audio/Music.cs'
 'Assets/5MinuteGUI/Scripts/Menu/ButtonToggle.cs'
 'Assets/5MinuteGUI/Scripts/Menu/GameMenu.cs'
@@ -102,6 +102,7 @@
 'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_Score.cs'
 'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_SetParticleSortingLayer.cs'
 'Assets/Example Games/Hat Trick - The Catch Game/Scripts/HT_StartGame.cs'
+'Assets/Scripts/ClickEvent.cs'
 'Assets/Scripts/ClickEvents.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
