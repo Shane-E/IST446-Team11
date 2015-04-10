@@ -59,6 +59,16 @@ function OnTriggerEnter2D(obj : Collider2D) {
 	        spawnScript.end_game_trigger();
 	    	}
 	    }
+	    /*
+		if(name == "bomb(clone)"){
+			Destroy(gameObject);	//destroys item
+			spawnScript.incBombCount();	//calls function to increase bomb counter
+		}*/
+
+		if(name == "salvage(clone)"){
+			Destroy(gameObject); // destroy item
+			spawnScript.incSalvageCount(); //calls function to increase salvage counter
+		}
     }
 }
 
