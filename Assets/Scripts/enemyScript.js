@@ -29,6 +29,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
         Destroy(obj.gameObject);
         
         spawnScript.incScore();
+        itemDrop();
     }
 
 	//MOVED TO spaceshipScript.
@@ -40,3 +41,18 @@ function OnTriggerEnter2D(obj : Collider2D) {
         spawnScript.end_game_trigger();
     }*/
 }
+
+function itemDrop () {
+	var itemRoll = Random.Range(0,100);
+	if(itemRoll >= 0 && itemRoll < 10){ //Bomb Drop 10%
+		//need to add bomb elements
+		//Spawns bomb item to be collected
+		
+		//spawnBomb(this.transform.position.x,this.transform.position.y);
+	}
+	else if(itemRoll < 75){	//Salvage drop rate == 65%
+		//spawns Salvage to be used for upgrades
+		spawnScript.spawnSalvage(this.transform.position.x,this.transform.position.y); //x and y are enemies x and y before death
+
+	}
+}		
