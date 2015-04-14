@@ -12,10 +12,13 @@ public var bombCount : int;
 public var shoot: AudioClip;
 public var explode: AudioClip;
 public var regen: AudioClip;
+public var bombExplosion: AudioClip;
 public var clones;
 private var animator: Animator;
 private var canShoot: boolean;
 private var canMove: boolean;
+private var bombCD: int = 2;
+private var nextBomb: float = 0.0;
 
 public var health: UnityEngine.UI.Slider;
 public var shield: UnityEngine.UI.Slider;
@@ -108,6 +111,17 @@ function Update() {
     }else{
     	canMove = true;
     	canShoot = true;
+    }
+    // X = Bomb Use
+    if(Input.GetKey("x") && bombCount >0 && Time.time > nextBomb){
+  		var scan : GameObject;
+  		nextBomb = Time.time + bombCD;
+  		GetComponent.<AudioSource>().PlayOneShot(bombExplosion, .9);
+        for(scan in GameObject.FindGameObjectsWithTag("Enemy")) {
+              GameObject.Destroy(scan);
+              spawnScript.incScore();
+        }
+        spawnScript.decBombCount();
     }
     
     //Grabs the score and checks if the player have beaten the level.

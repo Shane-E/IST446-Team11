@@ -40,6 +40,9 @@ static function incScore () {
 static function incBombCount(){
 	bombCount++;
 }
+static function decBombCount(){
+	bombCount--;
+}
 
 static function incSalvageCount(){
 	salvageCount++;

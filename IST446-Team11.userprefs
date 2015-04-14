@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemyScript.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\spaceshipScript.js">
     <Files>
-      <File FileName="Assets\Scripts\spaceshipScript.js" Line="107" Column="20" />
-      <File FileName="Assets\Scripts\enemyScript.js" Line="48" Column="37" />
+      <File FileName="Assets\Scripts\spaceshipScript.js" Line="14" Column="29" />
+      <File FileName="Assets\Scripts\enemyScript.js" Line="52" Column="3" />
+      <File FileName="Assets\Scripts\spawnScript.js" Line="44" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

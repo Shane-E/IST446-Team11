@@ -139,7 +139,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8249186, guid: 138a3ad732451a449b488189af782ef2, type: 2}
       propertyPath: BypassListenerEffects
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8249186, guid: 138a3ad732451a449b488189af782ef2, type: 2}
       propertyPath: m_Volume
@@ -205,6 +205,18 @@ Prefab:
       propertyPath: shield
       value: 
       objectReference: {fileID: 654262432}
+    - target: {fileID: 11449186, guid: 138a3ad732451a449b488189af782ef2, type: 2}
+      propertyPath: bombExplosion
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dc7455402dfa462b89a4bbd513955e9, type: 3}
+    - target: {fileID: 8249186, guid: 138a3ad732451a449b488189af782ef2, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8249186, guid: 138a3ad732451a449b488189af782ef2, type: 2}
+      propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 138a3ad732451a449b488189af782ef2, type: 2}
   m_RootGameObject: {fileID: 1130196637}
@@ -1233,8 +1245,8 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1370,9 +1382,12 @@ MonoBehaviour:
   scoreObj: {fileID: 0}
   shieldAnim: {fileID: 1810086669}
   score: 0
+  salvageCount: 0
+  bombCount: 0
   shoot: {fileID: 8300000, guid: 1743f0d445b86480b8ecfdbc8c84a5f9, type: 3}
   explode: {fileID: 8300000, guid: a019ae3af8e864616b85773c509f5285, type: 3}
   regen: {fileID: 8300000, guid: 48cff5e57f3a3e94a9bec1b9792c011d, type: 3}
+  bombExplosion: {fileID: 8300000, guid: 3dc7455402dfa462b89a4bbd513955e9, type: 3}
   health: {fileID: 1640527007}
   shield: {fileID: 654262432}
 --- !u!212 &1130196643
