@@ -2,6 +2,8 @@
 
 // Public variable that contains the speed of the enemy
 public var speed : int = 20;
+public var salvage : GameObject;
+public var bomb : GameObject;
 
 // Function called when the enemy is created
 function Start () { 
@@ -44,15 +46,29 @@ function OnTriggerEnter2D(obj : Collider2D) {
 
 function itemDrop () {
 	var itemRoll = Random.Range(0,100);
-	if(itemRoll >= 0 && itemRoll < 10){ //Bomb Drop 10%
+	if(itemRoll >= 0 && itemRoll < 1){ //Bomb Drop 1%
 		//need to add bomb elements
 		//Spawns bomb item to be collected
 		
-		//spawnBomb(this.transform.position.x,this.transform.position.y);
+		spawnBomb(this.transform.position.x,this.transform.position.y);
 	}
-	else if(itemRoll < 75){	//Salvage drop rate == 65%
+	else if(itemRoll < 26){	//Salvage drop rate == 25%
 		//spawns Salvage to be used for upgrades
-		spawnScript.spawnSalvage(this.transform.position.x,this.transform.position.y); //x and y are enemies x and y before death
-
+		 //x and y are enemies x and y before death
+		spawnSalvage(this.transform.position.x,this.transform.position.y);
 	}
 }		
+
+function spawnSalvage(x,y){
+	var x1 = x;
+	var x2 = y;
+	var spawnPoint = new Vector2(x1, x2);
+	Instantiate(salvage, spawnPoint, Quaternion.identity);
+}
+
+function spawnBomb(x,y){
+	var x1 = x;
+	var x2 = y;
+	var spawnPoint = new Vector2(x1, x2);
+	Instantiate(bomb, spawnPoint, Quaternion.identity);
+}

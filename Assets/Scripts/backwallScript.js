@@ -21,8 +21,12 @@ function OnTriggerEnter2D(obj : Collider2D) {
       		
       	}
     }
+    if (name == "salvage(Clone)" || name == "bomb(Clone)") {
+        // destroy the bullet
+        Destroy(obj.gameObject);
+    }
+    
 }
-
 /*function OnGUI () {
 	GUI.Label (new Rect (Screen.width - 70, 5, 50, 15), "Left: " + enemies_left, menuStyle);
 }*/

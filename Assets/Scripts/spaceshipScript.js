@@ -7,6 +7,8 @@ public var playerDie: boolean;
 public var scoreObj: spawnScript;
 public var shieldAnim: ParticleSystem;
 public var score: int;
+public var salvageCount : int;
+public var bombCount : int;
 public var shoot: AudioClip;
 public var explode: AudioClip;
 public var regen: AudioClip;
@@ -64,12 +66,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
 			Destroy(gameObject);	//destroys item
 			spawnScript.incBombCount();	//calls function to increase bomb counter
 		}*/
-
-		if(name == "salvage(clone)"){
-			Destroy(gameObject); // destroy item
-			spawnScript.incSalvageCount(); //calls function to increase salvage counter
-		}
-    }
+	}
 }
 
 // This function gets called ~60 times per second
@@ -115,6 +112,8 @@ function Update() {
     
     //Grabs the score and checks if the player have beaten the level.
     score = scoreObj.getScore();
+    salvageCount = scoreObj.getSalvageCount();
+    bombCount = scoreObj.getBombCount();
     /*
     if(score >= 30){
     	levelFinished = true;

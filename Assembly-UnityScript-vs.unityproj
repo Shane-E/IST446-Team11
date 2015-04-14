@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\backwallScript.js" />
+     <Compile Include="Assets\Scripts\bombScript.js" />
      <Compile Include="Assets\Scripts\bulletScript.js" />
      <Compile Include="Assets\Scripts\enemyScript.js" />
+     <Compile Include="Assets\Scripts\salvageScript.js" />
      <Compile Include="Assets\Scripts\spaceshipScript.js" />
      <Compile Include="Assets\Scripts\spawnScript.js" />
      <Compile Include="Assets\Scripts\upgradeScene.js" />

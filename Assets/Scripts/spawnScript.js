@@ -1,12 +1,11 @@
 ﻿// Variable to store the enemy prefab
 public var enemy : GameObject;
-public var salvage : GameObject;
-public var bomb : GameObject;
+
 static var score : int;
 var menuStyle : GUIStyle;
 static var end_game : int;
 static var salvageCount : int;
-static var bombCount : int;
+static var bombCount : int = 3;
 
 // Variable to know how fast we should create new enemies
 public var spawnTime : float = 0.5;
@@ -34,26 +33,8 @@ function addEnemy() {
  	}
 }
 
-static function spawnSalvage(x,y){
-	var x1 = x;
-	var x2 = y;
-	var spawnPoint = new Vector2(x1, x2);
-	Instantiate(salvage, spawnPoint, Quaternion.identity);
-}
-
-static function spawnBomb(x,y){
-	var x1 = x;
-	var x2 = y;
-	var spawnPoint = new Vector2(x1, x2);
-	Instantiate(bomb, spawnPoint, Quaternion.identity);
-}
-
 static function incScore () {
 	score++;
-}
-
-static function getScore () {
-	return score;
 }
 
 static function incBombCount(){
@@ -64,6 +45,17 @@ static function incSalvageCount(){
 	salvageCount++;
 }
 
+static function getScore () {
+	return score;
+}
+
+static function getSalvageCount(){
+	return salvageCount;
+}
+
+static function getBombCount(){
+	return bombCount;
+}
 
 static function end_game_trigger () {
 	end_game = 1;
@@ -79,6 +71,8 @@ function Update () {
 
 function OnGUI () {
 	GUI.Label (new Rect (Screen.width - 70, 25, 50, 15), "Score: " + score, menuStyle);
+	GUI.Label (new Rect (Screen.width - 70, 45, 50, 15), "Salvage: " + salvageCount, menuStyle);
+	GUI.Label (new Rect (Screen.width - 70, 65, 50, 15), "Bombs: " + bombCount, menuStyle);
 	if (end_game) {
 		GUI.Label (new Rect (Screen.width/2, Screen.height/2, 50, 15), "You Lost!\n Press Enter To Restart.", menuStyle);
 	}

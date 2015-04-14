@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ClickEvent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\enemyScript.js">
     <Files>
-      <File FileName="Assets/Scripts/ClickEvent.cs" Line="30" Column="5" />
+      <File FileName="Assets\Scripts\spaceshipScript.js" Line="107" Column="20" />
+      <File FileName="Assets\Scripts\enemyScript.js" Line="48" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
