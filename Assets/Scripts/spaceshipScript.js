@@ -7,13 +7,18 @@ public var playerDie: boolean;
 public var scoreObj: spawnScript;
 public var shieldAnim: ParticleSystem;
 public var score: int;
+public var salvageCount : int;
+public var bombCount : int;
 public var shoot: AudioClip;
 public var explode: AudioClip;
 public var regen: AudioClip;
+public var bombExplosion: AudioClip;
 public var clones;
 private var animator: Animator;
 private var canShoot: boolean;
 private var canMove: boolean;
+private var bombCD: int = 2;
+private var nextBomb: float = 0.0;
 
 public var health: UnityEngine.UI.Slider;
 public var shield: UnityEngine.UI.Slider;
@@ -59,7 +64,12 @@ function OnTriggerEnter2D(obj : Collider2D) {
 	        spawnScript.end_game_trigger();
 	    	}
 	    }
-    }
+	    /*
+		if(name == "bomb(clone)"){
+			Destroy(gameObject);	//destroys item
+			spawnScript.incBombCount();	//calls function to increase bomb counter
+		}*/
+	}
 }
 
 // This function gets called ~60 times per second
@@ -102,9 +112,22 @@ function Update() {
     	canMove = true;
     	canShoot = true;
     }
+    // X = Bomb Use
+    if(Input.GetKey("x") && bombCount >0 && Time.time > nextBomb){
+  		var scan : GameObject;
+  		nextBomb = Time.time + bombCD;
+  		GetComponent.<AudioSource>().PlayOneShot(bombExplosion, 1);
+        for(scan in GameObject.FindGameObjectsWithTag("Enemy")) {
+              GameObject.Destroy(scan);
+              spawnScript.incScore();
+        }
+        spawnScript.decBombCount();
+    }
     
     //Grabs the score and checks if the player have beaten the level.
     score = scoreObj.getScore();
+    salvageCount = scoreObj.getSalvageCount();
+    bombCount = scoreObj.getBombCount();
     /*
     if(score >= 30){
     	levelFinished = true;

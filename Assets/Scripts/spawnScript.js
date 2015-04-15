@@ -1,8 +1,11 @@
 ﻿// Variable to store the enemy prefab
 public var enemy : GameObject;
+
 static var score : int;
 var menuStyle : GUIStyle;
 static var end_game : int;
+static var salvageCount : int;
+static var bombCount : int = 3;
 
 // Variable to know how fast we should create new enemies
 public var spawnTime : float = 0.5;
@@ -34,8 +37,27 @@ static function incScore () {
 	score++;
 }
 
+static function incBombCount(){
+	bombCount++;
+}
+static function decBombCount(){
+	bombCount--;
+}
+
+static function incSalvageCount(){
+	salvageCount++;
+}
+
 static function getScore () {
 	return score;
+}
+
+static function getSalvageCount(){
+	return salvageCount;
+}
+
+static function getBombCount(){
+	return bombCount;
 }
 
 static function end_game_trigger () {
@@ -52,6 +74,8 @@ function Update () {
 
 function OnGUI () {
 	GUI.Label (new Rect (Screen.width - 70, 25, 50, 15), "Score: " + score, menuStyle);
+	GUI.Label (new Rect (Screen.width - 70, 45, 50, 15), "Salvage: " + salvageCount, menuStyle);
+	GUI.Label (new Rect (Screen.width - 70, 65, 50, 15), "Bombs: " + bombCount, menuStyle);
 	if (end_game) {
 		GUI.Label (new Rect (Screen.width/2, Screen.height/2, 50, 15), "You Lost!\n Press Enter To Restart.", menuStyle);
 	}

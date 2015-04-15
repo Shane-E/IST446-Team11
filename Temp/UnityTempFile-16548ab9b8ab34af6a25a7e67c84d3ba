@@ -44,10 +44,9 @@
 -define:INCLUDE_IL2CPP
 -define:PLATFORM_SUPPORTS_MONO
 -define:RENDER_SOFTWARE_CURSOR
--define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE_WIN
 -define:UNITY_STANDALONE
 -define:ENABLE_SUBSTANCE
--define:ENABLE_GAMECENTER
 -define:ENABLE_TEXTUREID_MAP
 -define:ENABLE_RUNTIME_GI
 -define:ENABLE_MOVIES
@@ -63,8 +62,10 @@
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -i:UnityEditor
 'Assets/Scripts/backwallScript.js'
+'Assets/Scripts/bombScript.js'
 'Assets/Scripts/bulletScript.js'
 'Assets/Scripts/enemyScript.js'
+'Assets/Scripts/salvageScript.js'
 'Assets/Scripts/spaceshipScript.js'
 'Assets/Scripts/spawnScript.js'
 'Assets/Scripts/upgradeScene.js'
