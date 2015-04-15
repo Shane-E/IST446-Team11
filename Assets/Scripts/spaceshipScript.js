@@ -116,7 +116,7 @@ function Update() {
     if(Input.GetKey("x") && bombCount >0 && Time.time > nextBomb){
   		var scan : GameObject;
   		nextBomb = Time.time + bombCD;
-  		GetComponent.<AudioSource>().PlayOneShot(bombExplosion, .9);
+  		GetComponent.<AudioSource>().PlayOneShot(bombExplosion, 1);
         for(scan in GameObject.FindGameObjectsWithTag("Enemy")) {
               GameObject.Destroy(scan);
               spawnScript.incScore();

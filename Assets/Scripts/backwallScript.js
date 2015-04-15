@@ -15,11 +15,11 @@ function OnTriggerEnter2D(obj : Collider2D) {
     if (name == "enemy(Clone)") {
         // destroy the bullet
         Destroy(obj.gameObject);
-        enemies_left--;
+        /*enemies_left--;
       	if (enemies_left == 0) {
       		spawnScript.end_game_trigger();
       		
-      	}
+      	}*/
     }
     if (name == "salvage(Clone)" || name == "bomb(Clone)") {
         // destroy the bullet
