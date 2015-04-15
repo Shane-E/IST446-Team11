@@ -6,7 +6,7 @@ function Start () {
 
 function OnTriggerEnter2D(obj : Collider2D) {  
 	//Sets the collider size for the objects dropped.
-    this.GetComponent.<BoxCollider2D>().size = new Vector2(4,2);
+    //this.GetComponent.<BoxCollider2D>().size = new Vector2(4,2);
     var name = obj.gameObject.name;
 	
     // If it collided with spaceship

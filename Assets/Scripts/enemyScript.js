@@ -46,7 +46,7 @@ function OnTriggerEnter2D(obj : Collider2D) {
 
 function itemDrop () {
 	var itemRoll = Random.Range(0,100);
-	if(itemRoll >= 0 && itemRoll < 1){ //Bomb Drop 1%
+	if(itemRoll >= 0 && itemRoll < 16){ //Bomb Drop 1%
 		//need to add bomb elements
 		//Spawns bomb item to be collected
 		

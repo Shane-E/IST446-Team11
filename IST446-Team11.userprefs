@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/backwallScript.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/salvageScript.js">
     <Files>
-      <File FileName="Assets/Scripts/spaceshipScript.js" Line="119" Column="1" />
-      <File FileName="Assets/Scripts/salvageScript.js" Line="22" Column="2" />
-      <File FileName="Assets/Scripts/backwallScript.js" Line="22" Column="11" />
+      <File FileName="Assets/Scripts/enemyScript.js" Line="49" Column="35" />
+      <File FileName="Assets/Scripts/bombScript.js" Line="9" Column="7" />
+      <File FileName="Assets/Scripts/salvageScript.js" Line="9" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
