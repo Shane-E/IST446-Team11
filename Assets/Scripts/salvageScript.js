@@ -5,11 +5,13 @@ function Start () {
 }
 
 function OnTriggerEnter2D(obj : Collider2D) {  
+	//Sets the collider size for the objects dropped.
+    this.GetComponent.<BoxCollider2D>().size = new Vector2(4,2);
     var name = obj.gameObject.name;
-
-    // If it collided with a bullet
+	
+    // If it collided with spaceship
     if (name == "spaceship") {
-        // Destroy itself (the enemy)
+        // Destroy itself (the item dropped)
         Destroy(gameObject);     
         spawnScript.incSalvageCount();
     }
